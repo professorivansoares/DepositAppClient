@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Switch, Route } from 'react-router-dom';
+import SupplierAdd from './pages/SupplierAdd';
+import ProductAdd from './pages/ProductAdd';
 import './App.css';
+import DepositAdd from './pages/DepositAdd';
+import InventoryAdd from './pages/InventoryAdd';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Switch>
+        <Route path='/deposit' component={DepositAdd}/>  
+        <Route path='/inventory' component={InventoryAdd}/>  
+        <Route path='/supplier' component={SupplierAdd}/>  
+        <Route path='/product' component={ProductAdd}/>               
+        <Route path='/' component={() => { return (<h2>test</h2>)}}/>       
+      </Switch>
+      <br />
+      <br />
+      <br />
+      <Footer />
+    </>
   );
 }
 
