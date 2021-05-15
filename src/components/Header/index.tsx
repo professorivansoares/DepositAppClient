@@ -13,13 +13,12 @@ const Header: React.FC = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link><Link to='/'><FontAwesomeIcon icon={faHome} /> Home</Link></Nav.Link>
-            <Nav.Link><Link to='/deposit'><FontAwesomeIcon icon={faWarehouse} /> Depositos</Link></Nav.Link>
-            <Nav.Link><Link to='/inventory'><FontAwesomeIcon icon={faArchive} /> Estoque</Link></Nav.Link>
-            <Nav.Link><Link to='/product'><FontAwesomeIcon icon={faBoxOpen} /> Produtos</Link></Nav.Link>
-            <Nav.Link><Link to='/supplier'><FontAwesomeIcon icon={faUsers} /> Fornecedores</Link></Nav.Link>
+            <Nav.Link><Link to='/deposits'><FontAwesomeIcon icon={faWarehouse} /> Depositos</Link></Nav.Link>
+            <Nav.Link><Link to='/inventories'><FontAwesomeIcon icon={faArchive} /> Estoque</Link></Nav.Link>
+            <Nav.Link><Link to='/products'><FontAwesomeIcon icon={faBoxOpen} /> Produtos</Link></Nav.Link>
+            <Nav.Link><Link to='/suppliers'><FontAwesomeIcon icon={faUsers} /> Fornecedores</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Text><i>Mark Otto</i> <a href="#login">Logout</a></Navbar.Text>
       </Container>
     </Navbar>
   );
