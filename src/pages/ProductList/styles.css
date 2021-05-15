@@ -1,0 +1,4 @@
+/* Faz o botão adicionar ficar alinhado a direita */
+.add-product-button {
+  float: right;
+}
