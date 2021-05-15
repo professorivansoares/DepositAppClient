@@ -7,21 +7,21 @@ import ProductAdd from './pages/ProductAdd';
 import './App.css';
 import DepositAdd from './pages/DepositAdd';
 import InventoryAdd from './pages/InventoryAdd';
+import Home from './pages/Home';
+import ProductList from './pages/ProductList';
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
       <Switch>
-        <Route path='/deposit' component={DepositAdd}/>  
-        <Route path='/inventory' component={InventoryAdd}/>  
-        <Route path='/supplier' component={SupplierAdd}/>  
-        <Route path='/product' component={ProductAdd}/>               
-        <Route path='/' component={() => { return (<h2>test</h2>)}}/>       
+        <Route path='/deposits' component={DepositAdd}/>  
+        <Route path='/inventories' component={InventoryAdd}/>  
+        <Route path='/suppliers' component={SupplierAdd}/>  
+        <Route path='/products/add' component={ProductAdd}/>   
+        <Route path='/products' component={ProductList}/>               
+        <Route path='/' component={Home}/>       
       </Switch>
-      <br />
-      <br />
-      <br />
       <Footer />
     </>
   );
